@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindEm", "NoAuth\FindEm.csproj", "{4058B523-BFB3-4769-8AA4-56565861A4E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindEm", "FindEm\FindEm.csproj", "{4058B523-BFB3-4769-8AA4-56565861A4E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindEmTests", "NoAuthTests\FindEmTests.csproj", "{2C3E86F1-D88F-40C5-8A72-D95EC9C6F5ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindEmTests", "FindEmTests\FindEmTests.csproj", "{2C3E86F1-D88F-40C5-8A72-D95EC9C6F5ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

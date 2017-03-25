@@ -63,7 +63,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NoAuth\FindEm.csproj">
+    <ProjectReference Include="..\FindEm\FindEm.csproj">
       <Project>{4058B523-BFB3-4769-8AA4-56565861A4E2}</Project>
       <Name>FindEm</Name>
     </ProjectReference>
