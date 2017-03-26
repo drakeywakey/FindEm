@@ -5,17 +5,10 @@ import { AppService } from './app.service';
 @Component({
     providers: [AppService],
     selector: 'my-app',
-    template: `    
-    <input type="text" [(ngModel)]="search" />
-    <button (click)="getPeople()">Click me!</button>
-    <ul>
-      <li *ngFor="let person of people">
-        <img src="{{ person.ImagePath }}" />
-        <p>{{ person.FirstName }}</p>
-      </li>
-    </ul>
-  `
+    templateUrl: './tsScripts/app/app.component.html',
+    styleUrls: ['./tsScripts/app/app.component.css']
 })
+
 export class AppComponent {
     constructor(private appService: AppService) { }
     search = '';
@@ -23,6 +16,5 @@ export class AppComponent {
 
     getPeople(): void {
         this.appService.getPeople(this.search).then(people => this.people = people);
-        console.log(this.people);
     }
 }

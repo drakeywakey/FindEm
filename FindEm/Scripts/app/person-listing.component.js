@@ -9,26 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var app_service_1 = require('./app.service');
-var AppComponent = (function () {
-    function AppComponent(appService) {
-        this.appService = appService;
-        this.search = '';
+var person_1 = require('./person');
+var PersonListingComponent = (function () {
+    function PersonListingComponent() {
     }
-    AppComponent.prototype.getPeople = function () {
-        var _this = this;
-        this.appService.getPeople(this.search).then(function (people) { return _this.people = people; });
-    };
-    AppComponent = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', person_1.Person)
+    ], PersonListingComponent.prototype, "person", void 0);
+    PersonListingComponent = __decorate([
         core_1.Component({
-            providers: [app_service_1.AppService],
-            selector: 'my-app',
-            templateUrl: './tsScripts/app/app.component.html',
-            styleUrls: ['./tsScripts/app/app.component.css']
+            selector: 'person-listing',
+            template: "    \n    <img src=\"{{ person.ImagePath }}\" />\n    <h3>{{ person.FirstName + ' ' + person.LastName }}</h3>\n    <p>{{ person.Age }} years old</p>\n    <p>Address: {{ person.Address }}</p>\n    <p>Interests: {{ person.Interests }}</p>\n  "
         }), 
-        __metadata('design:paramtypes', [app_service_1.AppService])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [])
+    ], PersonListingComponent);
+    return PersonListingComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.PersonListingComponent = PersonListingComponent;
+//# sourceMappingURL=person-listing.component.js.map

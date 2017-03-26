@@ -1,0 +1,7 @@
+﻿<input type="text" [(ngModel)]="search" />
+<button (click)="getPeople()">{{ search === '' ? 'Show Everyone' : 'Filter' }}</button>
+<div class="people">
+    <div *ngFor="let person of people">
+        <person-listing [person]="person"></person-listing>
+    </div>
+</div>
