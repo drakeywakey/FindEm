@@ -1,7 +1,8 @@
-﻿.intro {
+﻿/* -------------- MAIN GRID STYLES ---------------- */
+.intro {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .people {
@@ -17,10 +18,21 @@
     width: 500px;
 }
 
+h2 {
+    color: steelblue;
+    font-family: 'Lobster', cursive;
+    font-size: 42px;
+}
+
+/* -------------- END OF MAIN GRID STYLES ---------------- */
+
+/* -------------- GRID ITEM STYLES ---------------- */
+
 .person-listing {
     align-items: center;
     display: flex;
     flex-direction: column;
+    height: 462px;
     transition: background .5s;
     width: 400px;
 }
@@ -30,19 +42,12 @@
     transition: background .5s;
 }
 
-
-h2 {
-    color: steelblue;
-    font-family: 'Lobster', cursive;
-    font-size: 42px;
-}
-
 img {
     height: 250px;
     width: 250px;
 }
 
-h3, p {
+h3 {
     color: #444;
 }
 
@@ -56,11 +61,18 @@ p {
 
 .info {
     align-items: center;
+    bottom: 114px;
+    color: transparent;
     display: flex;
     flex-direction: column;
-    visibility: hidden;
+    position: relative;
+    transition: color .1s, bottom .25s;
 }
 
 .hovered .info {
-    visibility: visible;
+    bottom: 0;
+    color: #444;
+    transition: color .75s, bottom .25s;
 }
+
+/* -------------- END OF GRID ITEM STYLES ---------------- */
