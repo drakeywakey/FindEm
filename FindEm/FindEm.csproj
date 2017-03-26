@@ -182,7 +182,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\cheap_diagonal_fabric.png" />
     <Content Include="Content\Images\person1.jpg" />
+    <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="gulpfile.js" />
@@ -209,6 +211,8 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="tsScripts\app\app.component.css" />
     <Content Include="tsScripts\app\app.component.html" />
+    <Content Include="tsScripts\app\person-listing.component.css" />
+    <Content Include="tsScripts\app\person-listing.component.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

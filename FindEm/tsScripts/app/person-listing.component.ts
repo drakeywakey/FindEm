@@ -3,13 +3,8 @@ import { Person } from './person';
 
 @Component({
     selector: 'person-listing',
-    template: `    
-    <img src="{{ person.ImagePath }}" />
-    <h3>{{ person.FirstName + ' ' + person.LastName }}</h3>
-    <p>{{ person.Age }} years old</p>
-    <p>Address: {{ person.Address }}</p>
-    <p>Interests: {{ person.Interests }}</p>
-  `
+    templateUrl: './tsScripts/app/person-listing.component.html',
+    styleUrls: ['./tsScripts/app/person-listing.component.css']
 })
 export class PersonListingComponent {
     @Input() person: Person

@@ -20,7 +20,8 @@ var PersonListingComponent = (function () {
     PersonListingComponent = __decorate([
         core_1.Component({
             selector: 'person-listing',
-            template: "    \n    <img src=\"{{ person.ImagePath }}\" />\n    <h3>{{ person.FirstName + ' ' + person.LastName }}</h3>\n    <p>{{ person.Age }} years old</p>\n    <p>Address: {{ person.Address }}</p>\n    <p>Interests: {{ person.Interests }}</p>\n  "
+            templateUrl: './tsScripts/app/person-listing.component.html',
+            styleUrls: ['./tsScripts/app/person-listing.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], PersonListingComponent);
