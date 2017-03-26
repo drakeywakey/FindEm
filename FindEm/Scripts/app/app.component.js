@@ -19,6 +19,9 @@ var AppComponent = (function () {
         var _this = this;
         this.appService.getPeople(this.search).then(function (people) { return _this.people = people; });
     };
+    AppComponent.prototype.onHover = function (person) {
+        this.hoveredPerson = person;
+    };
     AppComponent = __decorate([
         core_1.Component({
             providers: [app_service_1.AppService],

@@ -17,7 +17,7 @@
     width: 500px;
 }
 
-person-listing {
+.person-listing {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@ person-listing {
     width: 400px;
 }
 
-person-listing:hover {
+.person-listing:hover {
     background: #fff;
     transition: background .5s;
 }
@@ -35,4 +35,32 @@ h2 {
     color: steelblue;
     font-family: 'Lobster', cursive;
     font-size: 42px;
+}
+
+img {
+    height: 250px;
+    width: 250px;
+}
+
+h3, p {
+    color: #444;
+}
+
+h3 {
+    font-family: 'Anton', sans-serif;
+}
+
+p {
+    font-family: 'Inconsolata', monospace;
+}
+
+.info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+}
+
+.hovered .info {
+    visibility: visible;
 }

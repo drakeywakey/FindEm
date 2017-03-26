@@ -13,8 +13,13 @@ export class AppComponent {
     constructor(private appService: AppService) { }
     search = '';
     people: Person[];
+    hoveredPerson: Person;
 
     getPeople(): void {
         this.appService.getPeople(this.search).then(people => this.people = people);
+    }
+
+    onHover(person: Person): void {
+        this.hoveredPerson = person;
     }
 }
