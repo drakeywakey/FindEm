@@ -33,12 +33,12 @@ namespace NoAuth.Models
 
                 persons.Add(new Person()
                 {
-                    FirstName = "Someone",
-                    LastName = "New",
-                    Age = 1,
-                    Address = "Earth",
-                    Interests = "Breathing, Eating, Acting",
-                    ImagePath = "/Content/Images/person1.jpg"
+                    FirstName = "Jon",
+                    LastName = "Hamm",
+                    Age = 46,
+                    Address = "St. Louis, Missouri, U.S.",
+                    Interests = "Golf, Tennis, Acting",
+                    ImagePath = "/Content/Images/jonHamm.jpg"
                 });
 
                 persons.Add(new Person()
@@ -46,49 +46,49 @@ namespace NoAuth.Models
                     FirstName = "Drake",
                     LastName = "Bennion",
                     Age = 24,
-                    Address = "Murray",
+                    Address = "Murray, Utah, U.S.",
                     Interests = "Sleeping, Video Games, Crying",
                     ImagePath = "https://lh6.googleusercontent.com/-aSR6vBntq54/AAAAAAAAAAI/AAAAAAAAAAA/bAAXNZ7ObxQ/s128-c-k/photo.jpg"
                 });
 
                 persons.Add(new Person()
                 {
-                    FirstName = "Dolores",
-                    LastName = "?",
-                    Age = -1,
-                    Address = "Westworld",
-                    Interests = "Breathing, Acting, Contemplating",
-                    ImagePath = "http://i.lv3.hbo.com/assets/images/series/westworld/character/dolores-1024.jpg"
+                    FirstName = "Evan Rachel",
+                    LastName = "Wood",
+                    Age = 29,
+                    Address = "Raleigh, North Carolina, U.S.",
+                    Interests = "Singing, Acting, Taekwondo",
+                    ImagePath = "/Content/Images/evanRachel.jpg"
                 });
 
                 persons.Add(new Person()
                 {
-                    FirstName = "Someone",
-                    LastName = "New",
-                    Age = 1,
-                    Address = "Earth",
-                    Interests = "Breathing, Eating, Acting",
-                    ImagePath = "/Content/Images/person1.jpg"
+                    FirstName = "Sean",
+                    LastName = "Bean",
+                    Age = 57,
+                    Address = "West Riding of Yorkshire, England",
+                    Interests = "Acting, Football, Art",
+                    ImagePath = "/Content/Images/seanBean.jpg"
                 });
 
                 persons.Add(new Person()
                 {
-                    FirstName = "Drake",
-                    LastName = "Bennion",
-                    Age = 24,
-                    Address = "Murray",
-                    Interests = "Sleeping, Video Games, Crying",
-                    ImagePath = "https://lh6.googleusercontent.com/-aSR6vBntq54/AAAAAAAAAAI/AAAAAAAAAAA/bAAXNZ7ObxQ/s128-c-k/photo.jpg"
+                    FirstName = "Nick",
+                    LastName = "Offerman",
+                    Age = 46,
+                    Address = "Minooka, Illinois, U.S.",
+                    Interests = "Woodworking, Writing, Directing",
+                    ImagePath = "/Content/Images/nickOfferman.jpg"
                 });
 
                 persons.Add(new Person()
                 {
-                    FirstName = "Dolores",
-                    LastName = "?",
-                    Age = -1,
-                    Address = "Westworld",
-                    Interests = "Breathing, Acting, Contemplating",
-                    ImagePath = "http://i.lv3.hbo.com/assets/images/series/westworld/character/dolores-1024.jpg"
+                    FirstName = "Mary",
+                    LastName = "Berry",
+                    Age = 82,
+                    Address = "Bath, Somerset, England",
+                    Interests = "Baking, Judging, Writing",
+                    ImagePath = "/Content/Images/maryBerry.jpg"
                 });
 
                 persons.Add(new Person()

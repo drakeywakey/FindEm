@@ -69,6 +69,10 @@ p {
     transition: color .1s, bottom .25s;
 }
 
+.hovered h3 {
+    color: steelblue;
+}
+
 .hovered .info {
     bottom: 0;
     color: #444;

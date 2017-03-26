@@ -183,7 +183,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Images\cheap_diagonal_fabric.png" />
-    <Content Include="Content\Images\person1.jpg" />
+    <Content Include="Content\Images\evanRachel.jpg" />
+    <Content Include="Content\Images\jonHamm.jpg" />
+    <Content Include="Content\Images\maryBerry.jpg" />
+    <Content Include="Content\Images\nickOfferman.jpg" />
+    <Content Include="Content\Images\seanBean.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
