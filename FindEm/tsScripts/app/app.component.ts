@@ -11,12 +11,17 @@ import { AppService } from './app.service';
 
 export class AppComponent {
     constructor(private appService: AppService) { }
-    search = '';
-    people: Person[];
     hoveredPerson: Person;
+    loaded = false;
+    people: Person[];
+    search = '';
 
     getPeople(): void {
-        this.appService.getPeople(this.search).then(people => this.people = people);
+        this.loaded = false;
+        this.appService.getPeople(this.search).then((people) => {
+            this.loaded = true;
+            this.people = people;
+        });
     }
 
     onHover(person: Person): void {

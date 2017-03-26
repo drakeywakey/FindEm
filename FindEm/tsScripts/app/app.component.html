@@ -5,7 +5,7 @@
         <button (click)="getPeople()">{{ search === '' ? 'Show Everyone' : 'Find Someone' }}</button>
     </p>
 </div>
-<div class="people">
+<div class="people" [class.loaded]="loaded">
     <div *ngFor="let person of people" [class.hovered]="person === hoveredPerson">
         <div class="person-listing" (mouseenter)="onHover(person)" (mouseleave)="onHover(null)">
             <h3>{{ person.FirstName + ' ' + person.LastName }}</h3>

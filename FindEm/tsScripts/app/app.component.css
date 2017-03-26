@@ -10,6 +10,13 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 25px;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.people:not(.loaded) {
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .people > div {

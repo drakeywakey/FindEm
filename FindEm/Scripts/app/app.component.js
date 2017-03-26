@@ -13,11 +13,16 @@ var app_service_1 = require('./app.service');
 var AppComponent = (function () {
     function AppComponent(appService) {
         this.appService = appService;
+        this.loaded = false;
         this.search = '';
     }
     AppComponent.prototype.getPeople = function () {
         var _this = this;
-        this.appService.getPeople(this.search).then(function (people) { return _this.people = people; });
+        this.loaded = false;
+        this.appService.getPeople(this.search).then(function (people) {
+            _this.loaded = true;
+            _this.people = people;
+        });
     };
     AppComponent.prototype.onHover = function (person) {
         this.hoveredPerson = person;
