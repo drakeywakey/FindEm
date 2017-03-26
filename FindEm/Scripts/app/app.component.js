@@ -15,9 +15,6 @@ var AppComponent = (function () {
         this.appService = appService;
         this.search = '';
     }
-    AppComponent.prototype.ngOnInit = function () {
-        this.getPeople();
-    };
     AppComponent.prototype.getPeople = function () {
         var _this = this;
         this.appService.getPeople(this.search).then(function (people) { return _this.people = people; });

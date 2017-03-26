@@ -1,4 +1,4 @@
-﻿import { Component, OnInit } from '@angular/core';
+﻿import { Component } from '@angular/core';
 import { Person } from './person';
 import { AppService } from './app.service';
 
@@ -16,14 +16,10 @@ import { AppService } from './app.service';
     </ul>
   `
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
     constructor(private appService: AppService) { }
     search = '';
     people: Person[];
-
-    ngOnInit(): void {
-        this.getPeople();
-    }
 
     getPeople(): void {
         this.appService.getPeople(this.search).then(people => this.people = people);
