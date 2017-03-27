@@ -1,10 +1,32 @@
-﻿/* -------------- MAIN GRID STYLES ---------------- */
+﻿/* -------------- HEADER STYLES --------------------*/
+input, button {
+    border: transparent;
+    font-size: 24px;
+    outline: none;
+}
+
+input {
+    background: #e0e0e0;
+    color: tomato;
+    font-family: 'Inconsolata', monospace;
+}
+
+button {
+    background: tomato;
+    border-radius: 4px;
+    color: #422;
+    font-family: 'Lobster', cursive;
+}
+
 .intro {
     align-items: center;
     display: flex;
     flex-direction: column;
 }
+/* -------------- END HEADER STYLES --------------------*/
 
+
+/* -------------- MAIN GRID STYLES ---------------- */
 .people {
     display: flex;
     flex-wrap: wrap;
@@ -22,13 +44,15 @@
 .people > div {
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
     width: 500px;
 }
 
 h2 {
-    color: steelblue;
+    color: tomato;
     font-family: 'Lobster', cursive;
-    font-size: 42px;
+    font-size: 52px;
+    margin: 10px;
 }
 
 /* -------------- END OF MAIN GRID STYLES ---------------- */
@@ -45,25 +69,26 @@ h2 {
 }
 
 .person-listing:hover {
-    background: #fff;
+    background: #e0e0e0;
     transition: background .5s;
 }
 
 img {
     height: 250px;
     width: 250px;
+    z-index: 1;
 }
 
 h3 {
-    color: #444;
-}
-
-h3 {
-    font-family: 'Anton', sans-serif;
+    color: #e0e0e0;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 22px;
 }
 
 p {
+    margin: 12px;
     font-family: 'Inconsolata', monospace;
+    font-size: 16px;
 }
 
 .info {
@@ -74,16 +99,17 @@ p {
     flex-direction: column;
     position: relative;
     transition: color .1s, bottom .25s;
+    z-index: 0;
 }
 
 .hovered h3 {
-    color: steelblue;
+    color: tomato;
 }
 
 .hovered .info {
     bottom: 0;
-    color: #444;
-    transition: color .75s, bottom .25s;
+    color: tomato;
+    transition: color .75s, bottom .5s;
 }
 
 /* -------------- END OF GRID ITEM STYLES ---------------- */

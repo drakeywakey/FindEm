@@ -183,6 +183,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Images\cheap_diagonal_fabric.png" />
+    <Content Include="Content\Images\darkBackground.png" />
     <Content Include="Content\Images\evanRachel.jpg" />
     <Content Include="Content\Images\jonHamm.jpg" />
     <Content Include="Content\Images\maryBerry.jpg" />
