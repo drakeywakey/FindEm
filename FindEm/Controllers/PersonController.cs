@@ -17,7 +17,7 @@ namespace NoAuth.Controllers
         [HttpPost]
         public JsonResult Search(string searchString)
         {
-            System.Threading.Thread.Sleep(1500);
+            System.Threading.Thread.Sleep(5000);
             var persons = from p in db.Persons
                         where (p.FirstName.Contains(searchString) || p.LastName.Contains(searchString))
                         select p;

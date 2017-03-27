@@ -74,6 +74,7 @@ h2 {
 }
 
 img {
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
     height: 250px;
     width: 250px;
     z-index: 1;
@@ -113,3 +114,25 @@ p {
 }
 
 /* -------------- END OF GRID ITEM STYLES ---------------- */
+
+/* -------------- LOADING COMPONENT PLACEMENT -------------*/
+
+.loading-component:not(.loaded) {
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 160px;
+    transition: opacity 1s;
+}
+
+.loading-component.loaded {
+    opacity: 0;
+}
+
+/* -----------END OF LOADING COMPONENT PLACEMENT ----------*/
+
+svg {
+    position: absolute;
+}
