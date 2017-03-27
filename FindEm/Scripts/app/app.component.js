@@ -13,7 +13,7 @@ var app_service_1 = require('./app.service');
 var AppComponent = (function () {
     function AppComponent(appService) {
         this.appService = appService;
-        this.coordinates = [15, 170];
+        this.coordinates = [35, 185];
         this.loaded = false;
         this.search = '';
     }
@@ -30,8 +30,8 @@ var AppComponent = (function () {
         this.hoveredPerson = person;
     };
     AppComponent.prototype.onMouseLeave = function () {
-        this.coordinates[0] = 15;
-        this.coordinates[1] = 170;
+        this.coordinates[0] = 35;
+        this.coordinates[1] = 185;
     };
     AppComponent.prototype.onMouseMove = function (event) {
         this.coordinates[0] = event.clientX;

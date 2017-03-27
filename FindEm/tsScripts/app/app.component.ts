@@ -11,7 +11,7 @@ import { AppService } from './app.service';
 
 export class AppComponent {
     constructor(private appService: AppService) { }
-    coordinates = [15, 170];
+    coordinates = [35, 185];
     hoveredPerson: Person;
     loaded = false;
     people: Person[];
@@ -31,8 +31,8 @@ export class AppComponent {
     }
 
     onMouseLeave(): void {
-        this.coordinates[0] = 15;
-        this.coordinates[1] = 170;
+        this.coordinates[0] = 35;
+        this.coordinates[1] = 185;
     }
 
     onMouseMove(event: MouseEvent): void {
