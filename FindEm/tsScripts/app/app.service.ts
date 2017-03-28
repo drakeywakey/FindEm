@@ -9,8 +9,8 @@ export class AppService {
 
     constructor(private http: Http) { }
 
-    getPeople(search: string): Promise<Person[]> {
-        return this.http.post('/Person/Search', JSON.stringify({ searchString: search }), { headers: this.headers })
+    getPeople(search: string, delay: number): Promise<Person[]> {
+        return this.http.post('/Person/Search', JSON.stringify({ searchString: search, delay: delay }), { headers: this.headers })
             .toPromise()
             .then(response => response.json() as Person[])
             .catch(this.handleError);

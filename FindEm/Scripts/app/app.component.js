@@ -18,6 +18,7 @@ var AppComponent = (function () {
         this.coordinates = [35, 185];
         this.loaded = false;
         this.search = '';
+        this.searchDelay = 0;
         //this will be false on initial page landing, but once a search is made, switches to true
         //so loading from then on will display the loading message and search splashes
         this.afterFirstLoad = false;
@@ -28,7 +29,7 @@ var AppComponent = (function () {
         this.loaded = false;
         this.people = [];
         this.afterFirstLoad = true;
-        this.appService.getPeople(this.search).then(function (people) {
+        this.appService.getPeople(this.search, this.searchDelay).then(function (people) {
             _this.loaded = true;
             _this.people = people;
         });

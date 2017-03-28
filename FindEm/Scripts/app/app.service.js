@@ -16,8 +16,8 @@ var AppService = (function () {
         this.http = http;
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
     }
-    AppService.prototype.getPeople = function (search) {
-        return this.http.post('/Person/Search', JSON.stringify({ searchString: search }), { headers: this.headers })
+    AppService.prototype.getPeople = function (search, delay) {
+        return this.http.post('/Person/Search', JSON.stringify({ searchString: search, delay: delay }), { headers: this.headers })
             .toPromise()
             .then(function (response) { return response.json(); })
             .catch(this.handleError);

@@ -23,6 +23,10 @@ button {
     display: flex;
     flex-direction: column;
 }
+
+.delay {
+    color: tomato;
+}
 /* -------------- END HEADER STYLES --------------------*/
 
 
@@ -123,7 +127,7 @@ p {
     opacity: 1;
     position: absolute;
     right: 0;
-    top: 160px;
+    top: 190px;
     transition: opacity 1s;
 }
 

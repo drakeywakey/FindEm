@@ -18,6 +18,7 @@ export class AppComponent {
     loaded = false;
     people: Person[];
     search = '';
+    searchDelay = 0;
     //this will be false on initial page landing, but once a search is made, switches to true
     //so loading from then on will display the loading message and search splashes
     afterFirstLoad = false;
@@ -27,7 +28,7 @@ export class AppComponent {
         this.loaded = false;
         this.people = [];
         this.afterFirstLoad = true;
-        this.appService.getPeople(this.search).then((people) => {
+        this.appService.getPeople(this.search, this.searchDelay).then((people) => {
             this.loaded = true;
             this.people = people;
         });

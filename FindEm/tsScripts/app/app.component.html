@@ -1,5 +1,6 @@
 ﻿<div class="intro">
     <h2>FindEm</h2>
+    <p class="delay">Delay time: <input type="number" max="30" min="0" [(ngModel)]="searchDelay" /></p>
     <p>
         <input type="text" [(ngModel)]="search" (mouseenter)="onMouseLeave()" (keyup.enter)="getPeople()"/>
         <button (click)="getPeople()" (mouseenter)="onMouseLeave()">{{ search === '' ? 'Show Everyone' : 'Find Someone' }}</button>
