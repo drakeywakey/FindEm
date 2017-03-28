@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var app_service_1 = require('./app.service');
+var core_1 = require("@angular/core");
+var app_service_1 = require("./app.service");
 var AppComponent = (function () {
     function AppComponent(appService) {
         this.appService = appService;
@@ -29,6 +29,12 @@ var AppComponent = (function () {
         this.loaded = false;
         this.people = [];
         this.afterFirstLoad = true;
+        //sanitize input a little bit
+        if (this.searchDelay < 0) {
+            this.searchDelay = 0;
+        }
+        // and my research tells me LINQ is pretty good about protecting from SQL injections,
+        // so I guess this.search string doesn't need to be sanitized
         this.appService.getPeople(this.search, this.searchDelay).then(function (people) {
             _this.loaded = true;
             _this.people = people;
@@ -76,16 +82,16 @@ var AppComponent = (function () {
         var div = document.querySelector('.playground');
         div.innerHTML = "";
     };
-    AppComponent = __decorate([
-        core_1.Component({
-            providers: [app_service_1.AppService],
-            selector: 'my-app',
-            templateUrl: './tsScripts/app/app.component.html',
-            styleUrls: ['./tsScripts/app/app.component.css']
-        }), 
-        __metadata('design:paramtypes', [app_service_1.AppService])
-    ], AppComponent);
     return AppComponent;
 }());
+AppComponent = __decorate([
+    core_1.Component({
+        providers: [app_service_1.AppService],
+        selector: 'my-app',
+        templateUrl: './tsScripts/app/app.component.html',
+        styleUrls: ['./tsScripts/app/app.component.css']
+    }),
+    __metadata("design:paramtypes", [app_service_1.AppService])
+], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map
