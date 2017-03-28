@@ -87,9 +87,9 @@ h3 {
 }
 
 p {
-    margin: 12px;
     font-family: 'Inconsolata', monospace;
     font-size: 16px;
+    margin: 12px;
 }
 
 .info {
@@ -133,6 +133,84 @@ p {
 
 /* -----------END OF LOADING COMPONENT PLACEMENT ----------*/
 
+.afterFirstLoad {
+    align-items: center;
+    background: transparent;
+    color: tomato;
+    display: flex;
+    flex-direction: column;
+}
+
+.loaded .afterFirstLoad {
+    display: none;
+}
+
+
+/******** AND SOME HACKY CSS FOR GOOD MEASURE ************/
+.playground {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.playground.loaded {
+    display: none;
+}
+
 svg {
     position: absolute;
+}
+
+svg circle {
+    fill: none;
+}
+
+.tomato circle {
+    stroke: tomato;
+}
+
+.tomato path {
+    fill: tomato;
+}
+
+.gold circle {
+    stroke: gold;
+}
+
+.gold path {
+    fill: gold;
+}
+
+.palegreen circle {
+    stroke: palegreen;
+}
+
+.palegreen path {
+    fill: palegreen;
+}
+
+.steelblue circle {
+    stroke: steelblue;
+}
+
+.steelblue path {
+    fill: steelblue;
+}
+
+.purple circle {
+    stroke: purple;
+}
+
+.purple path {
+    fill: purple;
+}
+
+.white circle {
+    stroke: white;
+}
+
+.white path {
+    fill: white;
 }

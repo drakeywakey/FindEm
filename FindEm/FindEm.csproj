@@ -230,8 +230,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Person\Index.cshtml" />
-    <Content Include="Views\Person\_Search.cshtml" />
-    <Content Include="Views\Person\Create.cshtml" />
     <Content Include="tsScripts\tsconfig.json" />
     <Content Include="typings.json" />
   </ItemGroup>

@@ -18,10 +18,15 @@
         </div>
     </div>
 </div>
-<div class="loading-component" [class.loaded]="loaded" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave()">
-    <svg style.left="{{ coordinates[0] - 35 }}px" style.top="{{ coordinates[1] - 185 }}px" xmlns="http://www.w3.org/2000/svg" width="79" height="97">
-        <circle fill="none" stroke="tomato" cx="45" cy="34" r="32" stroke-width="4" />
-        <path fill="tomato" d="m22,57 12,7-21,31a2,1 28 0,1-12-8" />
-        <path fill="tomato" opacity=".3" d="m43,9a21,9 9 1,0 2,0" />
+<div class="loading-component" [class.loaded]="loaded">
+    <div class="afterFirstLoad" *ngIf="afterFirstLoad">
+        <h3>Sorry to keep you waiting! Lots of people to search through...</h3>
+        <p>Click around for a bit while you wait</p>
+    </div>
+    <svg class="tomato" style.left="{{ coordinates[0] - 35 }}px" style.top="{{ coordinates[1] - 185 }}px" xmlns="http://www.w3.org/2000/svg" width="79" height="97">
+        <circle cx="45" cy="34" r="32" stroke-width="4" />
+        <path d="m22,57 12,7-21,31a2,1 28 0,1-12-8" />
+        <path opacity=".3" d="m43,9a21,9 9 1,0 2,0" />
     </svg>
+    <div class="playground" [class.loaded]="loaded" (click)="onClick($event)" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave()"></div>
 </div>

@@ -13,14 +13,21 @@ var app_service_1 = require('./app.service');
 var AppComponent = (function () {
     function AppComponent(appService) {
         this.appService = appService;
+        this.clicks = 0;
+        this.colors = ['tomato', 'gold', 'palegreen', 'steelblue', 'purple', 'white'];
         this.coordinates = [35, 185];
         this.loaded = false;
         this.search = '';
+        //this will be false on initial page landing, but once a search is made, switches to true
+        //so loading from then on will display the loading message and search splashes
+        this.afterFirstLoad = false;
     }
     AppComponent.prototype.getPeople = function () {
         var _this = this;
+        this.resetLoadingDiv();
         this.loaded = false;
         this.people = [];
+        this.afterFirstLoad = true;
         this.appService.getPeople(this.search).then(function (people) {
             _this.loaded = true;
             _this.people = people;
@@ -40,6 +47,27 @@ var AppComponent = (function () {
         if (event.clientY <= 160) {
             this.onMouseLeave();
         }
+        // but if you thought THAT was hacky/dubious...
+    };
+    AppComponent.prototype.onClick = function (event) {
+        if (this.afterFirstLoad) {
+            this.clicks = (this.clicks + 1) % 6;
+            var loadComponent = document.querySelector('.loading-component');
+            var playground = document.querySelector('.playground');
+            var svg = loadComponent.querySelector('svg');
+            if (this.clicks === 0) {
+                this.colors.forEach(function (color) {
+                    svg.classList.remove(color);
+                });
+            }
+            svg.classList.add(this.colors[this.clicks]);
+            var newSvg = svg.cloneNode(true);
+            playground.appendChild(newSvg);
+        }
+    };
+    AppComponent.prototype.resetLoadingDiv = function () {
+        var div = document.querySelector('.playground');
+        div.innerHTML = "";
     };
     AppComponent = __decorate([
         core_1.Component({
