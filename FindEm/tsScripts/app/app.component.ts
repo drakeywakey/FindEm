@@ -13,7 +13,7 @@ export class AppComponent {
     constructor(private appService: AppService) { }
     clicks = 0;
     colors = ['tomato', 'gold', 'palegreen', 'steelblue', 'purple', 'white'];
-    coordinates = [35, 185];
+    coordinates = [35, 215];
     hoveredPerson: Person;
     loaded = false;
     people: Person[];
@@ -40,7 +40,7 @@ export class AppComponent {
 
     onMouseLeave(): void {
         this.coordinates[0] = 35;
-        this.coordinates[1] = 185;
+        this.coordinates[1] = 215;
     }
 
     onMouseMove(event: MouseEvent): void {
@@ -48,7 +48,7 @@ export class AppComponent {
         this.coordinates[1] = event.clientY;
 
         // a bit hacky, but need to make sure the magnifying class doesn't accidentally cover the search bar
-        if (event.clientY <= 160) {
+        if (event.clientY <= 200) {
             this.onMouseLeave();
         }
 

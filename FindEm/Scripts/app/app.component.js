@@ -15,7 +15,7 @@ var AppComponent = (function () {
         this.appService = appService;
         this.clicks = 0;
         this.colors = ['tomato', 'gold', 'palegreen', 'steelblue', 'purple', 'white'];
-        this.coordinates = [35, 185];
+        this.coordinates = [35, 215];
         this.loaded = false;
         this.search = '';
         this.searchDelay = 0;
@@ -39,13 +39,13 @@ var AppComponent = (function () {
     };
     AppComponent.prototype.onMouseLeave = function () {
         this.coordinates[0] = 35;
-        this.coordinates[1] = 185;
+        this.coordinates[1] = 215;
     };
     AppComponent.prototype.onMouseMove = function (event) {
         this.coordinates[0] = event.clientX;
         this.coordinates[1] = event.clientY;
         // a bit hacky, but need to make sure the magnifying class doesn't accidentally cover the search bar
-        if (event.clientY <= 160) {
+        if (event.clientY <= 200) {
             this.onMouseLeave();
         }
         // but if you thought THAT was hacky/dubious...

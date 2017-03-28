@@ -7,6 +7,7 @@
     </p>
 </div>
 <div class="people" [class.loaded]="loaded">
+    <h3 *ngIf="people && !people.length && afterFirstLoad">Sorry, seems we don't have any records matching your search for '{{search}}'</h3>
     <div *ngFor="let person of people" [class.hovered]="person === hoveredPerson">
         <div class="person-listing" (mouseenter)="onHover(person)" (mouseleave)="onHover(null)">
             <h3>{{ person.FirstName + ' ' + person.LastName }}</h3>
@@ -24,7 +25,7 @@
         <h3>Sorry to keep you waiting! Lots of people to search through...</h3>
         <p>Click around for a bit while you wait</p>
     </div>
-    <svg class="tomato" style.left="{{ coordinates[0] - 35 }}px" style.top="{{ coordinates[1] - 185 }}px" xmlns="http://www.w3.org/2000/svg" width="79" height="97">
+    <svg class="tomato" style.left="{{ coordinates[0] - 35 }}px" style.top="{{ coordinates[1] - 215 }}px" xmlns="http://www.w3.org/2000/svg" width="79" height="97">
         <circle cx="45" cy="34" r="32" stroke-width="4" />
         <path d="m22,57 12,7-21,31a2,1 28 0,1-12-8" />
         <path opacity=".3" d="m43,9a21,9 9 1,0 2,0" />
