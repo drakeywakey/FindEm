@@ -7,7 +7,7 @@
     </p>
 </div>
 <div class="people" [class.loaded]="loaded">
-    <h3 *ngIf="people && !people.length && afterFirstLoad">Sorry, seems we don't have any records matching your search for '{{search}}'</h3>
+    <h3 *ngIf="people && !people.length && loaded && afterFirstLoad">Sorry, seems we don't have any records matching your search for '{{search}}'</h3>
     <div *ngFor="let person of people" [class.hovered]="person === hoveredPerson">
         <div class="person-listing" (mouseenter)="onHover(person)" (mouseleave)="onHover(null)">
             <h3>{{ person.FirstName + ' ' + person.LastName }}</h3>

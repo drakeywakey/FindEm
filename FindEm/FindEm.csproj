@@ -182,13 +182,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Images\cheap_diagonal_fabric.png" />
     <Content Include="Content\Images\darkBackground.png" />
     <Content Include="Content\Images\evanRachel.jpg" />
     <Content Include="Content\Images\jonHamm.jpg" />
+    <Content Include="Content\Images\kanyeWest.jpg" />
+    <Content Include="Content\Images\lorde.jpg" />
     <Content Include="Content\Images\maryBerry.jpg" />
     <Content Include="Content\Images\nickOfferman.jpg" />
+    <Content Include="Content\Images\scarletJo.jpg" />
     <Content Include="Content\Images\seanBean.jpg" />
+    <Content Include="Content\Images\shaqONeal.jpg" />
+    <Content Include="Content\Images\steveBuscemi.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />

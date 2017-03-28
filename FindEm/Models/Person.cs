@@ -91,6 +91,56 @@ namespace NoAuth.Models
                     ImagePath = "https://lh6.googleusercontent.com/-aSR6vBntq54/AAAAAAAAAAI/AAAAAAAAAAA/bAAXNZ7ObxQ/s128-c-k/photo.jpg"
                 });
 
+                persons.Add(new Person()
+                {
+                    FirstName = "Kanye",
+                    LastName = "West",
+                    Age = 39,
+                    Address = "Atlanta, Georgia, U.S.",
+                    Interests = "Rapping, Mirrors, Fashion",
+                    ImagePath = "/Content/Images/kanyeWest.jpg"
+                });
+
+                persons.Add(new Person()
+                {
+                    FirstName = "Steve",
+                    LastName = "Buscemi",
+                    Age = 59,
+                    Address = "Brooklyn, New York, U.S.",
+                    Interests = "Acting, Firefighting",
+                    ImagePath = "/Content/Images/steveBuscemi.jpg"
+                });
+
+                persons.Add(new Person()
+                {
+                    FirstName = "Ella Marija",
+                    LastName = "Lani Yelich-O'Connor",
+                    Age = 20,
+                    Address = "Takapuna, Auckland, New Zealand",
+                    Interests = "Singing, Songwriting, Being Lorde",
+                    ImagePath = "/Content/Images/lorde.jpg"
+                });
+
+                persons.Add(new Person()
+                {
+                    FirstName = "Scarlett",
+                    LastName = "Johansson",
+                    Age = 32,
+                    Address = "Manhattan, New York City, U.S.",
+                    Interests = "Singing, Acting, Avengers",
+                    ImagePath = "/Content/Images/scarletJo.jpg"
+                });
+
+                persons.Add(new Person()
+                {
+                    FirstName = "Shaquille",
+                    LastName = "O'Neal",
+                    Age = 45,
+                    Address = "Newark, New Jersey, U.S.",
+                    Interests = "Basketball, Commercials",
+                    ImagePath = "/Content/Images/shaqONeal.jpg"
+                });
+
                 foreach (Person person in persons)
                 {
                     context.Persons.Add(person);
