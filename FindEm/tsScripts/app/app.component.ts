@@ -28,6 +28,15 @@ export class AppComponent {
         this.loaded = false;
         this.people = [];
         this.afterFirstLoad = true;
+
+        //sanitize input a little bit
+        if (this.searchDelay < 0) {
+            this.searchDelay = 0;
+        }
+
+        // and my research tells me LINQ is pretty good about protecting from SQL injections,
+        // so I guess this.search string doesn't need to be sanitized
+
         this.appService.getPeople(this.search, this.searchDelay).then((people) => {
             this.loaded = true;
             this.people = people;
@@ -64,11 +73,17 @@ export class AppComponent {
 
             if (this.clicks === 0) {
                 this.colors.forEach((color) => {
-                    svg.classList.remove(color);
+                    // would you believe me if I told you IE10 doesn't support classList on svg elements?
+                    // https://developer.mozilla.org/en-US/docs/Web/API/Element/classList#Browser_compatibility
+                    if (svg.classList) {
+                        svg.classList.remove(color);
+                    }
                 })
             }
 
-            svg.classList.add(this.colors[this.clicks]);
+            if (svg.classList) {
+                svg.classList.add(this.colors[this.clicks]);
+            }
             let newSvg = svg.cloneNode(true);
 
             playground.appendChild(newSvg);

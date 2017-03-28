@@ -58,10 +58,16 @@ var AppComponent = (function () {
             var svg = loadComponent.querySelector('svg');
             if (this.clicks === 0) {
                 this.colors.forEach(function (color) {
-                    svg.classList.remove(color);
+                    // would you believe me if I told you IE10 doesn't support classList on svg elements?
+                    // https://developer.mozilla.org/en-US/docs/Web/API/Element/classList#Browser_compatibility
+                    if (svg.classList) {
+                        svg.classList.remove(color);
+                    }
                 });
             }
-            svg.classList.add(this.colors[this.clicks]);
+            if (svg.classList) {
+                svg.classList.add(this.colors[this.clicks]);
+            }
             var newSvg = svg.cloneNode(true);
             playground.appendChild(newSvg);
         }
