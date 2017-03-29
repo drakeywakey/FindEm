@@ -141,6 +141,16 @@ namespace NoAuth.Models
                     ImagePath = "/Content/Images/shaqONeal.jpg"
                 });
 
+                persons.Add(new Person()
+                {
+                    FirstName = "Will",
+                    LastName = "Ferrell",
+                    Age = 49,
+                    Address = "Irvine, California, U.S.",
+                    Interests = "Comedy, Acting",
+                    ImagePath = "/Content/Images/WillFerrell.jpg"
+                });
+
                 foreach (Person person in persons)
                 {
                     context.Persons.Add(person);

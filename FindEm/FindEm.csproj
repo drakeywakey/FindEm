@@ -193,6 +193,7 @@
     <Content Include="Content\Images\seanBean.jpg" />
     <Content Include="Content\Images\shaqONeal.jpg" />
     <Content Include="Content\Images\steveBuscemi.jpg" />
+    <Content Include="Content\Images\willFerrell.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />

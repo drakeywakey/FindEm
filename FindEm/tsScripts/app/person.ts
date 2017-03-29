@@ -4,6 +4,6 @@
     LastName: string;
     Address: string;
     Age: number;
-    Interests: string[];
+    Interests: string;
     ImagePath: string;
 }
